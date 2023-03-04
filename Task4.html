@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Task 4</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Roboto:wght@300&display=swap');
+			.container{
+				display: flex;
+				justify-content: center;
+			}
+			.buttons{
+				display: flex;
+				justify-content: center;
+				}
+			.buttons button{
+				border-style: solid;
+				border-color: black;
+				border-radius: 7px;
+				justify-content: space-between;
+				letter-spacing: 8px;
+				padding: 6px;
+				margin-right: 25px;
+				font-size: 30px;
+			}
+			.buttons button:active{
+				border-color: #0CAFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div id="mainDiv">
+				<h1 style="display: flex; justify-content: center; color: #002D62; font-size: 80px; font-family: 'Kanit', sans-serif;">Counter</h1>
+				<h1 id="counter"; style="display: flex; justify-content: center; font-size: 110px; color: green; font-family: 'Kanit', sans-serif;
+					font-family: 'Roboto', sans-serif;"></h1><br>
+				<div class="buttons">
+					<button onClick="getcount('des')">Decrease</button>
+					<button onClick="getcount('res')">Reset</button>
+					<button onClick="getcount('inc')">Increase</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			let c = 0;
+			document.getElementById("counter").innerHTML = c
+		
+			function getcount(op){
+				switch(op){
+					case 'des':
+						if(c !== 0){
+							c--;
+						}
+						break;
+						
+					case 'res':
+						c=0;
+						break;
+						
+					case 'inc':
+						c++;
+						break;
+								
+				}
+				document.getElementById("counter").innerHTML = c;
+			}
+		</script>
+	</body>
+</html>
